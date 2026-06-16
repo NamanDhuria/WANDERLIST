@@ -1,5 +1,4 @@
 <% layout("layouts/boilerplate") -%>
-<%= success %>
 
 <style>
  #filters{
@@ -54,7 +53,6 @@
 
 <div class="collapse d-lg-block" id="filterCollapse">
   <div id="filters">
-    <div id="filters">
     <a href="/listings" class="filter text-decoration-none text-dark <%= !currCategory ? 'active-filter' : '' %>">
     <div><i class="fa-solid fa-fire"></i></div>
     <p>Trending</p>
@@ -105,9 +103,14 @@
         <p>Domes</p>
     </a>
 
-    <!-- tax toggle same rahega -->
-</div>
+     <div class="tax-toggle">
+        <div class="form-check-reverse form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+            <label class="form-check-label" for="switchCheckDefault">Display total after taxes</label>
+        </div>
+    </div>
   </div>
+ </div>
 </div>
 
 
