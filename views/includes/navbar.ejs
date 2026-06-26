@@ -37,7 +37,7 @@
       
       <a class="nav-link" href="/listings">Explore</a>
 
-      <% if(showSearch) { %>
+      <% if(locals.showSearch) { %>
       <form class="mx-auto d-flex" role="search" action="/listings" method="GET">
         <input class="form-control me-2 search-input" type="search" name="q" placeholder="Search destination" style="width: 300px;"/>
         <button class="btn search-btn" type="submit">

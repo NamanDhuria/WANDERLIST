@@ -1,3 +1,4 @@
+<% if(locals.showSearch) %>
 <% layout("layouts/boilerplate") -%>
 
 <style>
@@ -38,11 +39,25 @@
   align-items: center;
  }
 
- .active-filter {
+ 
+ .navbar {
+
+.active-filter {
     opacity: 1;
     border-bottom: 2px solid black;
+}  
+
+.navbar {
+    z-index: 1000;
+    background-color: white !important;
 }
 
+.navbar-collapse {
+    background-color: white;
+    z-index: 999;
+    padding: 1rem;
+}  
+}
 </style>
 
 <button class="navbar-toggler d-lg-none mb-2" type="button" 
@@ -114,7 +129,7 @@
 </div>
 
 
-<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-4 mt-3">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3">
   <% for(let listing of allListing) { %>
     <div class="col">
       <a href="/listings/<%= listing._id %>" class="listing-link text-decoration-none">
